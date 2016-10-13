@@ -14,14 +14,16 @@ public class Task {
     private int mIsDone;
 
     /**
-     * Creates a default <code>Task</code> with an id of -1, empty description and not done status.
+     * Creates a new <code>Task</code> from user input. Id is irrelevant, will be
+     * assigned automatically by the database.
+     * @param desc The task description
+     * @param done The task status
      */
-    public Task()
-    {
-        mId = -1;
-        mDescription = "";
-        mIsDone = 0;
-    }
+public Task(String desc, int done)
+{
+    this(-1, desc,done);
+}
+
 
     /**
      * Creates a new <code>Task</code> from its id, description and status.
